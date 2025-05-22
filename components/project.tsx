@@ -7,7 +7,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-type ProjectProps = (typeof projectsData)[number];
+type ProjectProps = (typeof projectsData)[number]& {
+  githubUrl?: string;
+  alt?: string;
+};
 
 export default function Project({
   title,
@@ -15,7 +18,7 @@ export default function Project({
   tags,
   imageUrl,
   githubUrl,
-  alt, // Add alt to props
+  alt, 
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({

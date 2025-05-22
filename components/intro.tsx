@@ -20,7 +20,7 @@ export default function Intro() {
       setCurrentTitleIndex((prev) => (prev + 1) % titles.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [titles.length]);
 
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -66,7 +66,7 @@ export default function Intro() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
         >
-          I'm Chaitanya Chaudhari
+          I am Chaitanya Chaudhari
         </motion.h1>
 
         <AnimatePresence mode="wait">
@@ -83,13 +83,13 @@ export default function Intro() {
         </AnimatePresence>
 
         <motion.p
-          className="text-lg font-medium !leading-[1.5] sm:text-xl text-gray-800 dark:text-white/80"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          Discover my journey—where code sparks innovation and tech shapes the future!
-        </motion.p>
+  className="text-lg font-medium !leading-[1.5] sm:text-xl text-gray-800 dark:text-white/80"
+  initial={{ opacity: 0, y: 100 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.3 }}
+>
+  Discover my journey : where code sparks innovation and tech shapes the future!
+</motion.p>
       </div>
 
       <motion.div

@@ -69,6 +69,7 @@ export const projectsData = [
       "Developing an AI-powered tool to combat misinformation by scrapping, translating and fact-checking news articles in English and Spanish",
     tags: ["Python", "MarianMT", "Streamlit", "JSON", "ChromaDB"],
     imageUrl: f1,
+    githubUrl:"https://github.com/Chaitanya980",
   },
   {
     title: "DockPilot",

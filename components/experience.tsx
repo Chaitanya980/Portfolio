@@ -41,11 +41,7 @@ export default function Experience() {
                   ? "0.4rem solid #4b5563"
                   : "0.4rem solid rgba(255, 255, 255, 0.5)",
             }}
-            date={
-              <span className="text-sm font-semibold text-teal-400">
-                {item.date}
-              </span>
-            }
+            date={item.date}
             icon={item.icon}
             iconStyle={{
               background:
@@ -69,19 +65,7 @@ export default function Experience() {
                 {item.location}
               </p>
 
-              {/* 🏷️ Tech Tags (optional if data supports it) */}
-              {item.tech && (
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {item.tech.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="text-xs bg-teal-600 text-white px-2 py-1 rounded-md font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              )}
+              
 
               <ul className="mt-4 list-disc pl-5 text-gray-300 dark:text-white/80 text-sm space-y-2">
                 {item.description.map((point, idx) => (

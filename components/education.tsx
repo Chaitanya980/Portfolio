@@ -7,10 +7,11 @@ import { educationData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
 export default function Education() {
-  const { ref } = useSectionInView("Education");
   const { theme } = useTheme();
+  const ref = useRef<HTMLElement>(null);
 
   return (
     <section id="education" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
