@@ -38,7 +38,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Web Development Intern",
+    title: "Software Development Intern",
     location: "Cognifront Software Pvt. Ltd ",
     description: [
       "Developed reusable UI components using JavaScript and React, improving development efficiency and ensuring consistent design across web applications.",
@@ -72,6 +72,22 @@ export const projectsData = [
     githubUrl:"https://github.com/Chaitanya980",
   },
   {
+    title: "UniSurvey",
+    description:
+      "A deployed survey application that enables feedback collection and analytics for campus use. Features a responsive UI, secure backend, and CI/CD pipeline with Docker for scalable deployment..",
+    tags: ["MySQL (AWS RDS)", "Angular", "Spring Boot", "Tailwind", "CI/CD"],
+    imageUrl: uni,
+    githubUrl:"https://github.com/Chaitanya980/UniSurvey",
+  },
+  {
+    title: "Zero-Downtime NGINX Architecture on AWS ",
+    description:
+      "A fault-tolerant web server setup designed to ensure continuous availability of NGINX services. ",
+    tags: [""],
+    imageUrl: uni,
+    githubUrl:"https://github.com/Chaitanya980/Zero-Downtime-NGINX-Architecture-on-AWS-with-Keepalived",
+  },
+  {
     title: "DockPilot",
     description:
       "Generates production-ready Dockerfiles using AI, streamlining container setup with customizable prompts, secure builds, and automated deployment support.",
@@ -80,12 +96,20 @@ export const projectsData = [
     githubUrl:"https://github.com/Chaitanya980/DockPilot",
   },
   {
-    title: "UniSurvey",
+    title: "F1 Grand Prix Winner Prediction",
     description:
-      "A deployed survey application that enables feedback collection and analytics for campus use. Features a responsive UI, secure backend, and CI/CD pipeline with Docker for scalable deployment..",
+      "Built high-accuracy Gradient Boosting model with Scikit-learn and FastF1 to predict Formula 1 winners",
     tags: ["MySQL (AWS RDS)", "Angular", "Spring Boot", "Tailwind", "CI/CD"],
     imageUrl: uni,
-    githubUrl:"https://github.com/Chaitanya980/UniSurvey",
+    githubUrl:"https://github.com/Chaitanya980/F1-Grand-Prix-Winner-Prediction-System",
+  },
+  {
+    title: "Loopify",
+    description:
+      "Loopify is a modern music web application built with React, Tailwind CSS, Redux, and RapidAPI, offering a seamless experience for music lovers. It features song searching, lyric exploration, and popular music discovery.",
+    tags: ["MySQL (AWS RDS)", "Angular", "Spring Boot", "Tailwind", "CI/CD"],
+    imageUrl: uni,
+    githubUrl:"https://github.com/Chaitanya980/Loopify",
   },
 ] as const;
 export const educationData = [

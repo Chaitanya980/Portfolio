@@ -89,6 +89,7 @@ export default function Intro() {
   transition={{ delay: 0.3 }}
 >
   Discover my journey : where code sparks innovation and tech shapes the future!
+  {/* Welcome! My work spans backend, cloud architecture, machine learning, networking, and distributed systems, all focused on building scalable, secure systems. I am currently pursuing a Master's in Computer Science at George Mason University. */}
 </motion.p>
       </div>
 
@@ -112,8 +113,8 @@ export default function Intro() {
 
         <a
           className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black dark:bg-white/10"
-          href="/images/Chaitanya_Chaudhari_Resume.pdf"
-          download="Chaitanya_Chaudhari_Resume.pdf"
+          href="/images/ChaitanyaChaudhari_Resume.pdf"
+          download="ChaitanyaChaudhari_Resume.pdf"
         >
           Download CV
           <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
