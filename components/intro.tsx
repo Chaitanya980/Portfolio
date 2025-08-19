@@ -11,8 +11,36 @@ import { RiMediumFill } from "react-icons/ri";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
+// Small helper to render gradient-highlighted words inline
+function Highlight({
+  children,
+  gradient,
+}: {
+  children: React.ReactNode;
+  gradient:
+    | "backend"
+    | "cloud"
+    | "ml"
+    | "net"
+    | "dist";
+}) {
+  const map: Record<string, string> = {
+    backend: "from-amber-400 via-orange-400 to-red-500",
+    cloud: "from-sky-400 via-cyan-400 to-indigo-500",
+    ml: "from-fuchsia-400 via-pink-400 to-rose-500",
+    net: "from-emerald-400 via-teal-400 to-cyan-500",
+    dist: "from-blue-400 via-indigo-400 to-violet-500",
+  };
+  return (
+    <span className={`bg-gradient-to-r ${map[gradient]} bg-clip-text text-transparent font-semibold`}>
+      {children}
+    </span>
+  );
+}
+
 export default function Intro() {
-  const titles = ["Software Developer", "Cloud-Native Developer", "AI Explorer"];
+  const titles = ["Software Developer", "Cloud‑Native Developer", "AI Explorer"];
+  const titleColors = ["text-teal-400", "text-sky-400", "text-fuchsia-400"];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
 
   useEffect(() => {
@@ -54,14 +82,15 @@ export default function Intro() {
 
       <div className="mb-10 mt-4 px-4">
         <motion.h1
-          className="mb-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+          className="mb-2 text-2xl font-medium !leading-[1.5] sm:text-4xl"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
           Hello 👋
         </motion.h1>
+
         <motion.h1
-          className="mb-4 text-5xl font-bold !leading-[1.5] sm:text-6xl"
+          className="mb-3 text-5xl font-bold !leading-[1.2] sm:text-6xl"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
@@ -72,7 +101,9 @@ export default function Intro() {
         <AnimatePresence mode="wait">
           <motion.h2
             key={titles[currentTitleIndex]}
-            className="mb-4 text-2xl font-semibold !leading-[1.5] sm:text-3xl text-teal-500"
+            className={`mb-4 text-2xl font-semibold !leading-[1.5] sm:text-3xl ${
+              titleColors[currentTitleIndex]
+            }`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -83,14 +114,20 @@ export default function Intro() {
         </AnimatePresence>
 
         <motion.p
-  className="text-lg font-medium !leading-[1.5] sm:text-xl text-gray-800 dark:text-white/80"
-  initial={{ opacity: 0, y: 100 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.3 }}
->
-  Discover my journey : where code sparks innovation and tech shapes the future!
-  {/* Welcome! My work spans backend, cloud architecture, machine learning, networking, and distributed systems, all focused on building scalable, secure systems. I am currently pursuing a Master's in Computer Science at George Mason University. */}
-</motion.p>
+          className="text-lg font-medium !leading-[1.7] sm:text-xl text-gray-800 dark:text-white/80"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          My work spans{" "}
+          <Highlight gradient="backend">backend</Highlight>,{" "}
+          <Highlight gradient="cloud">cloud architecture</Highlight>,{" "}
+          <Highlight gradient="ml">machine learning</Highlight>,{" "}
+          <Highlight gradient="net">networking</Highlight>, and{" "}
+          <Highlight gradient="dist">distributed systems</Highlight> — all
+          geared toward secure, scalable software. Currently pursuing my
+          Master’s in Computer Science at <span className="font-semibold">George Mason University</span>.
+        </motion.p>
       </div>
 
       <motion.div
