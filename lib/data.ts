@@ -10,26 +10,11 @@ import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
-  {
-    name: "Home",
-    hash: "#home",
-  },
-  {
-    name: "Skills",
-    hash: "#skills",
-  },
-  {
-    name: "Projects",
-    hash: "#projects",
-  },
-  {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
-    name: "Contact",
-    hash: "#contact",
-  },
+  { name: "Home", hash: "#home" },
+  { name: "Skills", hash: "#skills" },
+  { name: "Projects", hash: "#projects" },
+  { name: "Experience", hash: "#experience" },
+  { name: "Contact", hash: "#contact" },
 ] as const;
 
 export const experiencesData = [
@@ -60,12 +45,31 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: "Cloud Infrastructure Automation",
+    description:
+      " This project demonstrates a CI/CD pipeline using Terraform to provision AWS infrastructure and GitHub Actions to deploy a Dockerized Node.js app on EC2.",
+    tags: ["Terraform", "Docker", "Node", "CI/CD", "GitHub Actions"],
+    imageUrl: factchecker,                    
+    githubUrl: "https://github.com/Chaitanya980/terraform",
+    liveUrl: "",                               
+  },
+  {
+    title: "Product Recommendation Engine ",
+    description:
+      "A Python-based product recommendation engine leveraging collaborative filtering and cosine similarity for personalized e-commerce suggestions.",
+    tags: ["Python", "TF-IDF Vectorizatio", "Scikit-learn"],
+    imageUrl: factchecker,                    
+    githubUrl: "https://github.com/Chaitanya980/Product-Recommendation-Engine",
+    liveUrl: "",                               
+  },
+  {
     title: "Fact Checker for Multilingual News",
     description:
       "Developing an AI-powered tool to combat misinformation by scrapping, translating and fact-checking news articles in English and Spanish",
     tags: ["Python", "MarianMT", "Streamlit", "JSON", "ChromaDB"],
-    imageUrl: f1,
-    githubUrl:"https://github.com/Chaitanya980",
+    imageUrl: factchecker,                    
+    githubUrl: "https://github.com/Chaitanya980/AI-Fact-Check-For-Multilingual-News",
+    liveUrl: "",                               
   },
   {
     title: "UniSurvey",
@@ -73,15 +77,27 @@ export const projectsData = [
       "A deployed survey application that enables feedback collection and analytics for campus use. Features a responsive UI, secure backend, and CI/CD pipeline with Docker for scalable deployment..",
     tags: ["MySQL (AWS RDS)", "Angular", "Spring Boot", "Tailwind", "CI/CD"],
     imageUrl: uni,
-    githubUrl:"https://github.com/Chaitanya980/UniSurvey",
+    githubUrl: "https://github.com/Chaitanya980/UniSurvey",
+    liveUrl: "",                               
   },
   {
-    title: "Zero-Downtime NGINX Architecture on AWS ",
+    title: "Zero-Downtime NGINX Architecture on AWS",
     description:
-      "A fault-tolerant web server setup designed to ensure continuous availability of NGINX services. ",
-    tags: [""],
-    imageUrl: uni,
-    githubUrl:"https://github.com/Chaitanya980/Zero-Downtime-NGINX-Architecture-on-AWS-with-Keepalived",
+      "A fault-tolerant web server setup designed to ensure continuous availability of NGINX services.",
+    tags: ["AWS", "NGINX", "Keepalived", "HAProxy"],
+    imageUrl: rmtdevImg,                       // pick any banner you prefer
+    githubUrl:
+      "https://github.com/Chaitanya980/Zero-Downtime-NGINX-Architecture-on-AWS-with-Keepalived",
+    liveUrl: "",                               // infra project usually has no live demo
+  },
+  {
+    title: "Personal Portfolio Website",
+    description:
+      "Responsive multi-page portfolio and interactive highlights. Built using Next.js, React, and Tailwind CSS, and deployed on Vercel for fast, reliable performance across devices.",
+    tags: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    imageUrl: dock,
+    githubUrl: "",
+    liveUrl: "",                               // add if you host a demo
   },
   {
     title: "DockPilot",
@@ -89,25 +105,30 @@ export const projectsData = [
       "Generates production-ready Dockerfiles using AI, streamlining container setup with customizable prompts, secure builds, and automated deployment support.",
     tags: ["Python", "Ollama", "LLaMA 3", "Docker", "GitHub Actions"],
     imageUrl: dock,
-    githubUrl:"https://github.com/Chaitanya980/DockPilot",
+    githubUrl: "https://github.com/Chaitanya980/DockPilot",
+    liveUrl: "",                               // add if you host a demo
   },
   {
     title: "F1 Grand Prix Winner Prediction",
     description:
       "Built high-accuracy Gradient Boosting model with Scikit-learn and FastF1 to predict Formula 1 winners",
-    tags: ["MySQL (AWS RDS)", "Angular", "Spring Boot", "Tailwind", "CI/CD"],
-    imageUrl: uni,
-    githubUrl:"https://github.com/Chaitanya980/F1-Grand-Prix-Winner-Prediction-System",
+    tags: ["Python", "Scikit-learn", "FastF1", "Pandas"],
+    imageUrl: f1,                              // was uni
+    githubUrl:
+      "https://github.com/Chaitanya980/F1-Grand-Prix-Winner-Prediction-System",
+    liveUrl: "",                               // add if you have a Streamlit app etc.
   },
   {
     title: "Loopify",
     description:
-      "Loopify is a modern music web application built with React, Tailwind CSS, Redux, and RapidAPI, offering a seamless experience for music lovers. It features song searching, lyric exploration, and popular music discovery.",
-    tags: ["MySQL (AWS RDS)", "Angular", "Spring Boot", "Tailwind", "CI/CD"],
-    imageUrl: uni,
-    githubUrl:"https://github.com/Chaitanya980/Loopify",
+      "Loopify is a modern music web application built with React, Tailwind CSS, Redux, and RapidAPI, offering a seamless experience for music lovers.",
+    tags: ["React", "Redux", "Tailwind", "RapidAPI"],
+    imageUrl: wordanalyticsImg,                // or keep `uni` if you prefer
+    githubUrl: "https://github.com/Chaitanya980/Loopify",
+    liveUrl: "",                               // e.g., "https://loopify.vercel.app"
   },
 ] as const;
+
 export const educationData = [
   {
     title: "Master's in Computer Science",
@@ -123,12 +144,6 @@ export const educationData = [
     grade: "3.5/4.0 GPA",
     date: "2020 - 2024",
   },
-  // {
-  //   title: "Silver Oak Universal School ",
-  //   location: "Nashik, India",
-  //   grade: "3.8/4.0 GPA",
-  //   date: "2018",
-  // },
 ] as const;
 
 export const skillsData = [
