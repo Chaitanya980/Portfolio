@@ -1,36 +1,50 @@
+# 📌 Portfolio – Chaitanya Chaudhari
 
-Portfolio Link : https://portfolio-chaitanya980.vercel.app/
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Welcome to my personal portfolio repository! 🚀  
+This repository contains the source code for my professional portfolio website.
 
-## Getting Started
+ **🔗 Live Portfolio:** https://portfolio-chaitanya980.vercel.app/
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## About
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This portfolio showcases my background, skills, and projects as a Computer Science graduate student and software engineer. It is designed to provide a clear overview of my technical interests, experience, and ongoing work.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tech Stack Used
 
-## Learn More
+This portfolio is built using modern web technologies:
 
-To learn more about Next.js, take a look at the following resources:
+- **Frontend Framework:** Next.js (React)
+- **Language:** TypeScript, JavaScript
+- **Styling:** Tailwind CSS
+- **Tooling:** ESLint, PostCSS
+- **Hosting:** Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Currently Working On
 
-## Deploy on Vercel
+I am actively improving this portfolio and continuing to grow as an engineer. My current focus areas include:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Enhancing UI/UX and accessibility across the site  
+- Improving performance, SEO, and responsiveness  
+- Adding dynamic content and better project representations  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+## Learning & Building
+
+Alongside maintaining this portfolio, I am continuously **working on more projects and learning**:
+
+- Backend and distributed systems concepts  
+- Cloud-native development and system reliability  
+- Scalable APIs, system design, and production engineering  
+
+---
+
+## 🤝 Feedback
+
+Feedback and suggestions are always welcome. Feel free to explore the portfolio and reach out if you’d like to collaborate or connect.
